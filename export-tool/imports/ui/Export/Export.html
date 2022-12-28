@@ -1,0 +1,14 @@
+<template name="export">
+    <tr>
+        <td>{{text}}</td>
+        <td>
+            <div class="progress">
+                <div class="progress-bar {{#if isFinished progress}} progress-bar-striped {{/if}}"  
+                    role="progressbar"  style="width: {{progress}}%;" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100">
+                    {{progress}} %
+                </div>
+            </div>
+        </td>
+        <td>{{export_url}}</td>
+    </tr>
+</template>

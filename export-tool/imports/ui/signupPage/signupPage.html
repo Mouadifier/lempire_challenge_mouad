@@ -1,0 +1,34 @@
+<template name="signupPage">
+  <div class="mainContent">
+  {{#if isUserLogged}}
+    <form class="form-logout ">
+      <h2>You are logged in.</h2>
+      <button type="submit" class="btn btn-primary login-btn">Log out</button>
+    </form>
+  {{else}}
+    <form class="form-signup">
+        <div class="form-group">
+          <label for="inputEmail">Email address</label>
+          <input id="email" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label for="inputName">name</label>
+            <input id="username" type="text" class="form-control" aria-describedby="text" placeholder="Enter name">
+        </div>
+        <div class="form-group">
+          <label for="inputPassword1">Password</label>
+          <input id="password1" type="password" class="form-control" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <label for="inputPassword2">Confirm Password</label>
+            <input id="password2" type="password" class="form-control" placeholder="confirm Password">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+  {{/if}}
+  <br>
+  <div class="alert alert-danger" style="visibility: {{alert_visibility}}">
+    Danger! {{message}}
+  </div>
+</div>
+</template>

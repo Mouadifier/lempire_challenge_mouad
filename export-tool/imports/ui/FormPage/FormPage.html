@@ -1,0 +1,32 @@
+<template name="formPage">
+    <div class="mainContent">
+        {{#if isUserLogged}}
+    <header>
+        <h1>Exports List</h1>
+    </header>
+    <hr>
+    {{#if isLoading}}
+        <div class="loading">loading...</div>
+    {{/if}}
+    
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">name</th>
+                <th scope="col">progress</th>
+                <th scope="col">result</th>
+            </tr>
+        </thead>
+        <tbody>
+        {{#each exports}}
+            {{> export}}
+        {{/each}}
+        </tbody>
+    </table>
+    <br>
+    {{> form }}
+    {{else}}
+        <h2> You need to be logged in to acces this </h2>
+    {{/if}}
+</div>
+</template>

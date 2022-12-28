@@ -1,0 +1,19 @@
+<body>
+    {{> sidebar}}
+    {{> mainContainer }}
+</body>
+
+<template name="sidebar">
+    <aside class="sidebar-top">
+            <a ></a>
+            <div class="sidebar-links">
+                <a class="link-red" href="/login" id="profile_link"><i class="fa fa-user">Profile</i></a>
+                <a class="link-yellow" href="/form" id="form_link"><i class="fa fa-wpforms">Form</i></a>
+            </div>
+    </aside> 
+</template>
+
+<template name="mainContainer">
+    {{> Template.dynamic template=main}}
+</template>
+
