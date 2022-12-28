@@ -23,11 +23,12 @@ Template.signupPage.events({
         const password1 = trimInput(target.password1.value);
         const password2 = trimInput(target.password2.value);
 
-        if(isNotEmpty(email, "email") &&
-        isNotEmpty(username, "username") &&
-        isNotEmpty(password1, "password") &&
-        isNotEmpty(password2, "confirm password") &&
-        areValidPasswords(password1, password2)
+        if(
+          isNotEmpty(email, "email") &&
+          isNotEmpty(username, "username") &&
+          isNotEmpty(password1, "password") &&
+          isNotEmpty(password2, "confirm password") &&
+          areValidPasswords(password1, password2)
         ){
           Accounts.createUser({
             username: username,
@@ -57,7 +58,6 @@ Template.signupPage.helpers({
     },
     alert_visibility(){
       const isAlerttriggered = Template.instance().alert.get()!==null;
-
       return isAlerttriggered?"visible":"hidden";
     }
   });
